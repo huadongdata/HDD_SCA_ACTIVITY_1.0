@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>demo</artifactId>
+    <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+    <packaging>pom</packaging>
+    <name>【开发案例模块】..........可参考该模块来开发自己的业务模块</name>
+    <version>0.0.1</version>
+    <description>案例模块</description>
+	
+	 <parent>
+        <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+        <artifactId>HDD_SCA_ACTIVITY_1.0</artifactId>
+        <version>1.2.9</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+	
+	 <properties>
+        <agilebpm.version>1.2.9</agilebpm.version>
+    </properties>
+	 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+	            <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+	            <artifactId>demo-api</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+	            <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+	            <artifactId>demo-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		
+			<dependency>
+	            <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+	            <artifactId>base-rest</artifactId>
+	            <version>${agilebpm.version}</version>
+	        </dependency>
+	        
+	        <dependency>
+	            <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+	            <artifactId>sys-api</artifactId>
+	            <version>${agilebpm.version}</version>
+	        </dependency>
+	        
+	         <dependency>
+	            <groupId>HDD_SCA_ACTIVITY_1.0</groupId>
+	            <artifactId>base-api</artifactId>
+	            <version>${agilebpm.version}</version>
+	        </dependency>
+	        
+		</dependencies>
+	</dependencyManagement>
+	
+    <modules>
+        <module>demo-api</module>
+        <module>demo-core</module>
+    </modules>
+</project>
